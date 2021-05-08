@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   alarm("../assets/sound.mp3", "#start-alarm", "#end-alarm");
   countDown("countdown", "Sep 28, 2021 00:00:00", "Happy Birthday");
   scrollTopBtn(".scroll-top-btn");
-  darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 document.addEventListener("keydown", (event) => {
   shortcuts(event);
   moveBall(event, ".ball", ".stage");
 });
+
+darkTheme(".dark-theme-btn", "dark-mode");
