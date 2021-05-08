@@ -286,3 +286,12 @@ img {
   background-color: var(--second-color);
   color: var(--main-color);
 }
+
+.mobile {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+.query-media {
+  padding: 2rem;
+}
