@@ -6,7 +6,6 @@ const responsiveMedia = (id, medQue, mobileContent, deskContent) => {
     } else {
       document.getElementById(id).innerHTML = mobileContent;
     }
-    console.log('MQ:', event.matches);
   };
   breakPoint.addListener(responsive);
   responsive(breakPoint);
