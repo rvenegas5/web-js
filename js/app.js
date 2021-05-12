@@ -4,6 +4,8 @@ import scrollTopBtn from "./scrollBtn.js";
 import darkTheme from "./dark_theme.js";
 import responsiveMedia from "./object-responsive.js";
 import responsiveTester from "./responsive-tester.js";
+import userDeviceInfo from "./devices-detection.js";
+import networkStatus from "./network_detec.js";
 import { digitalClok, alarm } from "./clock.js";
 import { shortcuts, moveBall } from "./keyboard.js";
 
@@ -32,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11277.233983815091!2d-79.95821457714439!3d-2.113446806826276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc0dd2a78f3c88a0!2sMall%20El%20Fortin!5e0!3m2!1sen!2sec!4v1620445261348!5m2!1sen!2sec" 
     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
   );
-  responsiveTester('form-tester', '#try', '#close');
+  responsiveTester("form-tester", "#try", "#close");
+  userDeviceInfo("user-device");
 });
 
 document.addEventListener("keydown", (event) => {
@@ -41,3 +44,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 darkTheme(".dark-theme-btn", "dark-mode");
+networkStatus();
