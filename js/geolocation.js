@@ -5,7 +5,6 @@ const getGeolocation = (id) => {
     timeout: 5000,
     maximumAge: 0,
   };
-
   const successLoc = (position) => {
     let coords = position.coords;
     idGeo.innerHTML = `
@@ -20,7 +19,7 @@ const getGeolocation = (id) => {
     `;
   };
   const errorLoc = (error) => {
-    console.log(error);
+    console.errors(error);
   };
   navigator.geolocation.getCurrentPosition(successLoc, errorLoc, options);
 };
