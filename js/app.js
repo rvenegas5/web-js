@@ -6,6 +6,7 @@ import responsiveMedia from "./object-responsive.js";
 import responsiveTester from "./responsive-tester.js";
 import userDeviceInfo from "./devices-detection.js";
 import networkStatus from "./network_detec.js";
+import webCam from "./webcam_detc.js";
 import { digitalClok, alarm } from "./clock.js";
 import { shortcuts, moveBall } from "./keyboard.js";
 
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   responsiveTester("form-tester", "#try", "#close");
   userDeviceInfo("user-device");
+  webCam("webcam");
 });
 
 document.addEventListener("keydown", (event) => {
