@@ -1,6 +1,7 @@
 const webCam = (id) => {
   const videoCam = document.getElementById(id);
   if (navigator.mediaDevices.getUserMedia) {
+    let tempP = document.createElement("p");
     navigator.mediaDevices
       .getUserMedia({ video: true }) // Promise
       .then((stream) => {
@@ -8,9 +9,10 @@ const webCam = (id) => {
         videoCam.play();
       })
       .catch((err) => {
+        tempP.innerHTML = `<mark>${err}</mark>`
         videoCam.insertAdjacentElement(
           "afterend",
-          `<p><mark>${err}</mark></p>`
+          tempP
         );
       });
   }

@@ -7,6 +7,7 @@ import responsiveTester from "./responsive-tester.js";
 import userDeviceInfo from "./devices-detection.js";
 import networkStatus from "./network_detec.js";
 import webCam from "./webcam_detc.js";
+import getGeolocation from "./geolocation.js";
 import { digitalClok, alarm } from "./clock.js";
 import { shortcuts, moveBall } from "./keyboard.js";
 
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollTopBtn(".scroll-top-btn");
   responsiveMedia(
     "youtube",
-    "(min-width: 720px)",
+    "(min-width: 1024px)",
     `<a href="https://www.youtube.com/embed/21qNxnCS8WU" target="_blank" 
     rel="noopener" class="mobile" data-dark>Watch Video</a>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/21qNxnCS8WU"
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   responsiveMedia(
     "gmaps",
-    "(min-width: 720px)",
+    "(min-width: 1024px)",
     `<a href="https://goo.gl/maps/qq1CJgYVYTpzXeir5" target="_blank" 
     rel="noopener" class="mobile" data-dark>See Map</a>`,
     `<iframe 
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   responsiveTester("form-tester", "#try", "#close");
   userDeviceInfo("user-device");
   webCam("webcam");
+  getGeolocation("geolocation");
 });
 
 document.addEventListener("keydown", (event) => {
