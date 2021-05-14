@@ -34,6 +34,7 @@ img {
 /*Hamburger Menu*/
 .header {
   position: sticky;
+  z-index: 997;
   top: 0;
   padding: 1rem;
   background: rgb(144, 138, 255);
@@ -375,3 +376,67 @@ img {
   opacity: 0;
   order: 1;
 }
+
+/*------------------- Responsive Slider -------------------*/
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.slider-slides {
+  position: relative;
+  height: 400px;
+}
+
+.slider-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.slider-slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+.slider-btn {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-btn a{
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.btn {
+  background-color: #fff;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 5px 5px 5px #888888;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: radial-gradient(#ffffff, #2938e0);
+}
+
