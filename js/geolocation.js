@@ -19,7 +19,7 @@ const getGeolocation = (id) => {
     `;
   };
   const errorLoc = (error) => {
-    console.errors(error);
+    console.error(error);
   };
   navigator.geolocation.getCurrentPosition(successLoc, errorLoc, options);
 };

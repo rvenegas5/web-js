@@ -8,6 +8,7 @@ import userDeviceInfo from "./devices-detection.js";
 import networkStatus from "./network_detec.js";
 import webCam from "./webcam_detc.js";
 import getGeolocation from "./geolocation.js";
+import searchFilters from "./search_filters.js";
 import { digitalClok, alarm } from "./clock.js";
 import { shortcuts, moveBall } from "./keyboard.js";
 
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   userDeviceInfo("user-device");
   webCam("webcam");
   getGeolocation("geolocation");
+  searchFilters(".card-filter", ".card");
 });
 
 document.addEventListener("keydown", (event) => {
